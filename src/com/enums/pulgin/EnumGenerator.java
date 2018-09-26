@@ -18,6 +18,7 @@ import com.intellij.psi.PsiField;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiMethod;
 import com.intellij.psi.PsiType;
+import com.intellij.psi.codeStyle.CodeStyleManager;
 import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.psi.util.PsiTreeUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -113,12 +114,11 @@ public class EnumGenerator extends AnAction {
                         con.delete();
                     }
                 }
-                //无参构造
-//                PsiMethod noParamConstructor = factory.createConstructor();
-//                psiClass.add(noParamConstructor);
-                //获取类名
+                // 添加一个全参构造函数，获取类名
                 String className = psiClass.getNameIdentifier().getText();
                 createConstructor(className, psiClass, factory, paramBody, methodBody);
+                //格式化代码
+                CodeStyleManager.getInstance(project).reformat(psiClass);
             });
         }
 
