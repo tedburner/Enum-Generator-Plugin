@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>com.your.company.unique.plugin.id</id>
-    <name>Plugin display name here</name>
+    <id>com.enums.pulgin</id>
+    <name>Enum-Generator-Plugin</name>
     <version>1.0</version>
     <vendor email="jlj_Vip98@qq.com" url="https://github.com/jiang95/Enum-Generator-Plugin">蒋先森</vendor>
 
