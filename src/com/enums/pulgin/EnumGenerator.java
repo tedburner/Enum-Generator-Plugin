@@ -88,6 +88,7 @@ public class EnumGenerator extends AnAction {
                 for (PsiField psiField : psiFields) {
                     //过滤枚举常量
                     if (StringUtils.contains(psiField.getType().getCanonicalText(), psiClassType.getName())) {
+                        //如果有默认参数
                         if (StringUtils.contains(psiField.getName(), "Null")) {
                             hasNull = true;
                         }
@@ -103,7 +104,7 @@ public class EnumGenerator extends AnAction {
 
                 //生成默认枚举常量
                 if (!hasNull) {
-                    PsiEnumConstant psiEnumConstant = factory.createEnumConstantFromText("null", psiClass);
+                    PsiEnumConstant psiEnumConstant = factory.createEnumConstantFromText("Null", psiClass);
                     psiClass.add(psiEnumConstant);
                 }
 
@@ -117,8 +118,6 @@ public class EnumGenerator extends AnAction {
                 // 添加一个全参构造函数，获取类名
                 String className = psiClass.getNameIdentifier().getText();
                 createConstructor(className, psiClass, factory, paramBody, methodBody);
-                //格式化代码
-                CodeStyleManager.getInstance(project).reformat(psiClass);
             });
         }
 
