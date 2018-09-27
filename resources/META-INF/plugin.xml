@@ -1,17 +1,17 @@
 <idea-plugin>
     <id>com.enums.pulgin</id>
-    <name>Enum-Generator-Plugin</name>
+    <name>Enum-Generator</name>
     <version>1.0</version>
     <vendor email="jlj_Vip98@qq.com" url="https://github.com/jiang95/Enum-Generator-Plugin">蒋先森</vendor>
 
     <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      To init java Enum and generator valueOfXXX method;
+      在枚举方法类中使用 Mac control + enter 或者 windows alt+ insert， 选择 EnumGenerator，生成枚举方法。
     ]]></description>
 
     <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+       To init java Enum and generator valueOfXXX method;
+      在枚举方法类中使用 Mac control + enter 或者 windows alt+ insert， 选择 EnumGenerator，生成枚举方法。
     ]]>
     </change-notes>
 
