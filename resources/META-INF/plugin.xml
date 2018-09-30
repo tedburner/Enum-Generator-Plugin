@@ -1,17 +1,21 @@
 <idea-plugin>
-    <id>com.enums.pulgin</id>
+    <id>com.enums.plugin</id>
     <name>Enum-Generator</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <vendor email="jlj_Vip98@qq.com" url="https://github.com/jiang95/Enum-Generator-Plugin">蒋先森</vendor>
 
     <description><![CDATA[
-      To init java Enum and generator valueOfXXX method;
-      在枚举方法类中使用 Mac control + enter 或者 windows alt+ insert， 选择 EnumGenerator，生成枚举方法。
+      To init java Enum, use  Mac control + enter or windows alt+ insert, and then generator valueOfXXX method;
+
+      在枚举方法类中使用 Mac control + enter 或者 windows alt+ insert， 选择 EnumGenerator，
+      生成 valueOfXXX 枚举方法。
     ]]></description>
 
     <change-notes><![CDATA[
-       To init java Enum and generator valueOfXXX method;
-      在枚举方法类中使用 Mac control + enter 或者 windows alt+ insert， 选择 EnumGenerator，生成枚举方法。
+      1、To init java Enum, use  Mac control + enter or windows alt+ insert, and then generator valueOfXXX method;
+
+      2、在枚举方法类中使用 Mac control + enter 或者 windows alt+ insert， 选择 EnumGenerator，
+      生成 valueOfXXX 枚举方法。
     ]]>
     </change-notes>
 
@@ -30,7 +34,7 @@
 
     <actions>
         <!-- Add your actions here -->
-        <action id="EnumGenerator" class="com.enums.pulgin.EnumGenerator" text="EnumGenerator"
+        <action id="EnumGenerator" class="com.enums.plugin.EnumGenerator" text="EnumGenerator"
                 description="Enum Generator">
             <add-to-group group-id="GenerateGroup" anchor="first"/>
         </action>
