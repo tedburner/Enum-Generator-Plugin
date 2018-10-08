@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.enums.plugin</id>
     <name>Enum-Generator</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <vendor email="jlj_vip98@qq.com" url="https://github.com/jiang95/Enum-Generator-Plugin">蒋先森</vendor>
 
     <description><![CDATA[
