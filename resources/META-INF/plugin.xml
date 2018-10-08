@@ -2,7 +2,7 @@
     <id>com.enums.plugin</id>
     <name>Enum-Generator</name>
     <version>1.0.2</version>
-    <vendor email="jlj_vip98@qq.com" url="https://github.com/jiang95/Enum-Generator-Plugin">蒋先森</vendor>
+    <vendor email="jlj_vip98@qq.com" url="https://github.com/jiang95/Enum-Generator-Plugin">Lucifer</vendor>
 
     <description><![CDATA[
       To init java Enum, use  Mac control + enter or windows alt+ insert, and then generator valueOfXXX method;
