@@ -25,7 +25,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * @author: lingjun.jlj
  * @date: 2018/9/25 17:28
- * @description:
+ * @description: enum 类代码生成器
  */
 public class EnumGenerator extends AnAction {
 
@@ -42,18 +42,21 @@ public class EnumGenerator extends AnAction {
 
         // 获取当前的project对象
         Project project = e.getProject();
-
-        PsiClass psiClass = getPsiClassFromContext(e, psiFile, editor);
+        //获取当前编辑的class对象
+        PsiClass psiClass = getPsiClassFromContext(psiFile, editor);
         if (psiClass != null && psiClass.isEnum()) {
-            generateEnumMethod(psiClass, originalPsiFile, project, editor);
+            generateEnumMethod(psiClass, originalPsiFile, project);
         }
 
     }
 
     /**
-     * 获取文本中的
+     * 获取类中的偏移量
+     *
+     * @param psiFile 文件信息
+     * @param editor
      */
-    private PsiClass getPsiClassFromContext(AnActionEvent e, PsiFile psiFile, Editor editor) {
+    private PsiClass getPsiClassFromContext(PsiFile psiFile, Editor editor) {
 
         if (psiFile == null || editor == null) {
             return null;
@@ -67,9 +70,13 @@ public class EnumGenerator extends AnAction {
     }
 
     /**
-     * 实现 Generate
+     * 实现 Enum Generate
+     *
+     * @param psiClass
+     * @param originalPsiFile
+     * @param project
      */
-    private void generateEnumMethod(PsiClass psiClass, PsiFile originalPsiFile, Project project, Editor editor) {
+    private void generateEnumMethod(PsiClass psiClass, PsiFile originalPsiFile, Project project) {
         if (psiClass == null) {
             return;
         }
@@ -94,9 +101,13 @@ public class EnumGenerator extends AnAction {
                     }
                     // 生成具体方法
                     else {
+                        //生成 valueOfxxx
                         addValueOfMethodBody(psiField, psiClass, factory);
+                        //生成get代码
                         addGetMethod(psiField, psiClass, factory);
+                        //生成set代码
                         addSetMethod(psiField, psiClass, factory);
+                        //拼接构造函数
                         createConstructor(psiField, paramBody, methodBody);
                     }
                 }
