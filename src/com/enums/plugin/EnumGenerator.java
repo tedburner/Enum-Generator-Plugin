@@ -174,10 +174,12 @@ public class EnumGenerator extends AnAction {
      * @param factory
      */
     private void addGetMethod(PsiField psiField, PsiClass psiClass, PsiElementFactory factory) {
-        String paramName = psiField.getName();
+        //参数类型
         String paramType = psiField.getType().getCanonicalText();
+        //参数名
+        String paramName = psiField.getName();
         boolean isBool = StringUtils.containsIgnoreCase(paramType, "boolean");
-
+        //方法名
         String methodName = (isBool ? "is" : "get") + StringUtils.capitalize(paramName);
         for (PsiMethod psiMethod : psiClass.findMethodsByName(methodName, true)) {
             psiMethod.delete();
