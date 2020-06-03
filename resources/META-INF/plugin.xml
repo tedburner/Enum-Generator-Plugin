@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.enums.plugin</id>
     <name>Enum-Generator</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <vendor email="jlj_vip98@qq.com" url="https://github.com/jiang95/Enum-Generator-Plugin">Lucifer</vendor>
 
     <description><![CDATA[
@@ -11,9 +11,8 @@
       生成 valueOfXXX 枚举方法。
     ]]></description>
 
-    <change-notes><![CDATA[
-      fix developer's email
-    ]]>
+    <change-notes>
+        <![CDATA[升级插件IntelliJ IDEA版本; Upgrade the IntelliJ IDEA version of the plugin]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->

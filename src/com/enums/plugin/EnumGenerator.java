@@ -156,7 +156,7 @@ public class EnumGenerator extends AnAction {
 
         String body = "public static " + returnType + " " + methodName + "(" + paramType + " " + paramName + ") {\n" +
                 "        for (" + returnType + " obj : " + returnType + ".values()) {\n" +
-                "            if (java.util.Objects.equals(obj." + paramName + "," + paramName + ") " + ") {\n" +
+                "            if (Objects.equals(obj." + paramName + "," + paramName + ") " + ") {\n" +
                 "                return obj;\n" +
                 "            }\n" +
                 "        }\n" +
